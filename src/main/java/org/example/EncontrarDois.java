@@ -18,19 +18,3 @@ public class EncontrarDois(List<Integer> list){
             }
     }
 }
-
-
-    public static void main(String[] args) {
-        EncontrarDois encontrarDois = new EncontrarDois();
-
-        encontrarDois.lista.add(1);
-        encontrarDois.lista.add(2);
-        encontrarDois.lista.add(3);
-        encontrarDois.lista.add(2);
-        encontrarDois.lista.add(5);
-        encontrarDois.lista.add(2);
-
-        int resultado = encontrarDois.numerodedois(encontrarDois.lista);
-        System.out.println("Quantidade de números 2: " + resultado);
-    }
-}
