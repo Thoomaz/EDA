@@ -3,21 +3,22 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EncontrarDois {
-
-    List<Integer> lista = new ArrayList<>();
-
-    public int numerodedois(List<Integer> lista) {
-        int count = 0;
-
-        for (Integer num : lista) {
-            if (num == 2) {
-                count++;
-            }
-        }
-
-        return count;
+public class EncontrarDois(List<Integer> list){
+    if (list.isEmpty()) {
+            return 0;
     }
+    else {
+        if (list.get(0) == 2){
+                list.remove(0);
+                return 1 + EncontrarDois(list);
+            }
+            else{
+                list.remove(0);
+                return EncontrarDois(list);
+            }
+    }
+}
+
 
     public static void main(String[] args) {
         EncontrarDois encontrarDois = new EncontrarDois();
